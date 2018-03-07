@@ -17,4 +17,4 @@ RUN curl -Lo tflint.zip https://github.com/wata727/tflint/releases/download/v0.5
 
 RUN apk add findutils bash
 
-COPY pull-request.sh .
+COPY pull-request.sh /bin/
