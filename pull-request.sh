@@ -4,7 +4,7 @@ set -e
 
 terraform -version
 
-for dir in $(dirname $(/usr/bin/find . -path ./.terraform -prune -o -type f -name "*.tf"|sort)|uniq); do
+for dir in $(/usr/bin/dirname $(/usr/bin/find . -path ./.terraform -prune -o -type f -name "*.tf"|sort)|uniq); do
     echo "Running terraform get in ${dir}..."
     terraform get ${dir}
     echo "Running terraform validate in ${dir}..."
